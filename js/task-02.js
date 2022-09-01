@@ -16,7 +16,7 @@ const ing = ingredients[i];
 const liEl = document.createElement('li');
   liEl.textContent = ing;
   liEl.classList.add('item');
-
-  elements.push(liEl);}
+  elements.push(liEl);
+}
 ulEl.append(...elements);
 

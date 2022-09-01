@@ -14,16 +14,11 @@ const images = [
 ];
 
 const galleryEl = document.querySelector('.gallery');
-const elements = [];
+const elements = images.map((image) => `<li><img src = '${image.url}' alt = '${image.alt}' width = "360px"></li>`);
+galleryEl.insertAdjacentHTML('beforeend', elements);
 
-for(const el of images) {
-
-  const some = galleryEl.insertAdjacentHTML('beforeend', `<li><img src = '${el.url}' alt = '${el.alt}' width = "360px"></li>`);
-  elements.push(some);
-}
-
-galleryEl.style.cssText = `
-display: flex;
+galleryEl.style.cssText = 
+`display: flex;
 alight-items: center;
 justify-content: space-between;
 list-style-type: none;
